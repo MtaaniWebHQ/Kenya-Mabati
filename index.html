@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kenya Mabati | Building Materials, Roofing, Timber & Water Tanks in Kenya</title>
 <meta name="description" content="Shop quality building materials from Kenya Mabati. Roofing, steel, fencing, cement, timber, water tanks and more. Ruiru location with delivery available across Kenya.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kenya Mabati">
+<meta property="og:title" content="Kenya Mabati | Building Materials, Roofing, Timber & Water Tanks">
+<meta property="og:description" content="Roofing, steel, fencing, cement, timber and water tanks. Ruiru location with delivery across Kenya.">
+<meta property="og:url" content="https://kenyamabati.co.ke/">
+<meta property="og:image" content="https://res.cloudinary.com/hztm3zo8/image/upload/c_fill,w_1200,h_630,q_auto,f_jpg/v1789823697/Box-Profile-914-Charcoal-Grey-Matt-1.jpg_yrq9gw.webp">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="keywords" content="Kenya Mabati, mabati Kenya, mabati prices Kenya, mabati price per metre Kenya, mabati Ruiru, mabati factory Ruiru, roofing sheets Kenya, roofing sheets prices Kenya, mabati factory, Box Profile mabati, Corrugated mabati price Kenya, Roman Tile mabati, Versatile mabati, Gauge 28 mabati, Gauge 30 mabati, mabati suppliers Kenya, roofing materials Kenya, mabati delivery Kenya">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1282,7 +1289,10 @@ renderHomeStore();
 renderFaqs();
 renderCategoryFilters();
 updateCartCount();
-go("home");
+(function(){
+  var id = new URLSearchParams(location.search).get("p");
+  if(id && findProduct(id)){ openProduct(id); } else { go("home"); }
+})();
 
 </script>
 
